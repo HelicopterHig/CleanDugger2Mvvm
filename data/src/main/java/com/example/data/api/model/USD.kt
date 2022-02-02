@@ -1,6 +1,6 @@
-package com.example.cleandugger2mvvm.model
+package com.example.data.api.model
 
-data class Wallet (
+data class USD (
     val code :String,
     val symbol : String,
     val rate : String,

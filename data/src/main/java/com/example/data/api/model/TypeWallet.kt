@@ -1,6 +1,4 @@
-package com.example.cleandugger2mvvm.model
-
-import com.google.gson.annotations.SerializedName
+package com.example.data.api.model
 
 data class TypeWallet(
 

@@ -1,6 +1,7 @@
-package com.example.cleandugger2mvvm.api
+package com.example.data.api
 
-import com.example.cleandugger2mvvm.model.Post
+
+import com.example.data.api.model.Post
 import retrofit2.http.GET
 
 interface Api {

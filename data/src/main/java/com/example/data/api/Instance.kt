@@ -1,6 +1,7 @@
-package com.example.cleandugger2mvvm.api
+package com.example.data.api
 
-import com.example.cleandugger2mvvm.utils.Constants.Companion.BASE_URL
+import com.example.data.constants.Constants.Companion.BASE_URL
+
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
@@ -14,7 +15,7 @@ object Instance {
             .build()
     }
 
-    val api : Api by lazy {
-        retrofit.create(Api::class.java)
+    val api : com.example.data.api.Api by lazy {
+        retrofit.create(com.example.data.api.Api::class.java)
     }
 }

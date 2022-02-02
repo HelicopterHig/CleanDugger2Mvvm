@@ -1,4 +1,4 @@
-package com.example.cleandugger2mvvm.model
+package com.example.data.api.model
 
 data class Time(
     val updated : String,

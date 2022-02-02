@@ -1,9 +1,6 @@
-package com.example.cleandugger2mvvm.utils
+package com.example.data.constants
 
 class Constants {
-
-
-
     companion object {
         const val  BASE_URL = "https://api.coindesk.com"
     }
