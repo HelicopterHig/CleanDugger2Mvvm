@@ -1,8 +1,11 @@
 package com.example.data.api.model
 
+import com.google.gson.annotations.SerializedName
+
 data class Post(
-    val time: Time,
-    val disclaimer : String,
-    val chartName : String,
-    val bpi: Bpi
+
+    val bpi: Bpi,
+    val chartName: String,
+    val disclaimer: String,
+    val time: Time
 )

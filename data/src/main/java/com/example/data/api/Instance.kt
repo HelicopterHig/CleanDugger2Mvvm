@@ -15,7 +15,7 @@ object Instance {
             .build()
     }
 
-    val api : com.example.data.api.Api by lazy {
-        retrofit.create(com.example.data.api.Api::class.java)
+    val api : Api by lazy {
+        retrofit.create(Api::class.java)
     }
 }
