@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Mr/AndroidStudioProjects/CleanDugger2Mvvm/app/src/main/res/layout/activity_main.xml" value="0.27309782608695654" />
-        <entry key="..\:/Users/Mr/AndroidStudioProjects/CleanDugger2Mvvm/app/src/main/res/layout/coin_item.xml" value="0.5" />
+        <entry key="..\:/Users/Mr/AndroidStudioProjects/CleanDugger2Mvvm/app/src/main/res/font-v26/matrix.xml" value="0.396875" />
+        <entry key="..\:/Users/Mr/AndroidStudioProjects/CleanDugger2Mvvm/app/src/main/res/font/bungee_shade.xml" value="0.396875" />
+        <entry key="..\:/Users/Mr/AndroidStudioProjects/CleanDugger2Mvvm/app/src/main/res/font/matrix.xml" value="0.396875" />
+        <entry key="..\:/Users/Mr/AndroidStudioProjects/CleanDugger2Mvvm/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/Mr/AndroidStudioProjects/CleanDugger2Mvvm/app/src/main/res/layout/coin_item.xml" value="0.67" />
         <entry key="..\:/Users/Mr/AndroidStudioProjects/CleanDugger2Mvvm2/app/src/main/res/layout/activity_main.xml" value="0.13541666666666666" />
       </map>
     </option>

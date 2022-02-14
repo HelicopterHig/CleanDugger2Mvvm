@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">CleanDugger2Mvvm</string>
+    <string name="coinName">Coin Name</string>
+    <string name="usd">USD</string>
+    <string name="gbp">GBP</string>
+    <string name="eur">EUR</string>
+    <string name="coinBoard">COINBOARD</string>
 </resources>
