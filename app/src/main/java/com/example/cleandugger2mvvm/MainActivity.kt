@@ -9,10 +9,14 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.cleandugger2mvvm.adapter.Adapter
 import com.example.cleandugger2mvvm.databinding.ActivityMainBinding
-import com.example.data.api.model.Post
-import com.example.data.repository.Repository
+import com.example.cleandugger2mvvm.presentation.MainViewModel
+import com.example.cleandugger2mvvm.presentation.MainViewModelFactory
+import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
+
+    @Inject
+    lateinit var viewModelFactory: MainViewModelFactory
 
     private lateinit var viewModel: MainViewModel
     private val adapter by lazy { Adapter() }
@@ -26,8 +30,7 @@ class MainActivity : AppCompatActivity() {
 
         setupRecyclerview()
 
-        val repository = Repository()
-        val viewModelFactory = MainViewModelFactory(repository)
+        (applicationContext as App).appComponent.inject(this)
         viewModel = ViewModelProvider(this, viewModelFactory).get(MainViewModel::class.java)
 
         viewModel.getCustomPosts()

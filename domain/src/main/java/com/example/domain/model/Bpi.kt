@@ -1,5 +1,8 @@
 package com.example.data.api.model
 
+import com.example.domain.model.EUR
+import com.example.domain.model.GBP
+import com.example.domain.model.USD
 import com.google.gson.annotations.SerializedName
 
 

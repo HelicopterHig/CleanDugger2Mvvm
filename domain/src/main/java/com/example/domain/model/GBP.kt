@@ -1,4 +1,4 @@
-package com.example.data.api.model
+package com.example.domain.model
 
 data class GBP(
     val code: String,

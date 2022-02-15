@@ -1,14 +1,15 @@
-package com.example.cleandugger2mvvm
+package com.example.cleandugger2mvvm.presentation
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.data.api.model.Post
-import com.example.data.repository.Repository
+import com.example.domain.model.Post
+import com.example.domain.repository.Repository
+import com.example.domain.usecase.GetWalletInfoUseCase
 import kotlinx.coroutines.launch
 import retrofit2.Response
 
-class MainViewModel(private val repository: Repository): ViewModel() {
+class MainViewModel(private val getWalletInfoUseCase: GetWalletInfoUseCase): ViewModel() {
 
 
     val myResponse: MutableLiveData<Post> = MutableLiveData()
@@ -22,7 +23,7 @@ class MainViewModel(private val repository: Repository): ViewModel() {
 
     fun getCustomPosts() {
         viewModelScope.launch {
-            val response = repository.getCustomPosts()
+            val response = getWalletInfoUseCase.getCustomPost()
             myCustomPosts.value = response
         }
     }

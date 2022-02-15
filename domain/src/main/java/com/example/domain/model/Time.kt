@@ -1,6 +1,4 @@
-package com.example.data.api.model
-
-import com.google.gson.annotations.SerializedName
+package com.example.domain.model
 
 data class Time(
     val updated: String,

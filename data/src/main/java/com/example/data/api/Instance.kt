@@ -1,5 +1,6 @@
 package com.example.data.api
 
+/**
 import com.example.data.constants.Constants.Companion.BASE_URL
 
 import retrofit2.Retrofit
@@ -18,4 +19,4 @@ object Instance {
     val api : Api by lazy {
         retrofit.create(Api::class.java)
     }
-}
+}**/
