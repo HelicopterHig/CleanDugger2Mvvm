@@ -6,5 +6,5 @@ data class USD (
     val rate: String,
     val rate_float: Double,
     val symbol: String
-    )
+)
 

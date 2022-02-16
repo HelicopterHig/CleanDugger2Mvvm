@@ -12,14 +12,7 @@ import retrofit2.Response
 class MainViewModel(private val getWalletInfoUseCase: GetWalletInfoUseCase): ViewModel() {
 
 
-    val myResponse: MutableLiveData<Post> = MutableLiveData()
-    //var myCustomPosts: MutableLiveData<Response<List<Post>>> = MutableLiveData()
-
     var myCustomPosts: MutableLiveData<Response<Post>> = MutableLiveData()
-
-
-
-
 
     fun getCustomPosts() {
         viewModelScope.launch {

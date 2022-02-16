@@ -23,13 +23,9 @@ class Adapter: RecyclerView.Adapter<Adapter.MyViewHolder>(){
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.binding.tvTitle.text  = myList[position].chartName
-
         holder.binding.tvDis.text = myList[position].bpi.usd.rate
         holder.binding.tvValue.text = myList[position].bpi.gbp.rate
         holder.binding.tvCoin.text = myList[position].bpi.eur.rate
-       //holder.binding.tvDis.text = myList[position].bpi.wallet.description
-       //holder.binding.tvValue.text = myList[position].bpi.wallet.rate
-       //holder.binding.tvCoin.text = myList[position].bpi.wallet.symbol
     }
 
     fun setData(newList: List<Post?> ){

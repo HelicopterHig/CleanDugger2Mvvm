@@ -6,4 +6,4 @@ data class EUR (
     val rate: String,
     val rate_float: Double,
     val symbol: String
-    )
+)
