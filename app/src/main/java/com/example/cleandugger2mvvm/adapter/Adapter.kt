@@ -4,11 +4,12 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.cleandugger2mvvm.databinding.CoinItemBinding
+import com.example.data.model.Coin
 import com.example.domain.model.Post
 
 class Adapter: RecyclerView.Adapter<Adapter.MyViewHolder>(){
 
-    private var myList = emptyList<Post>()
+    private var myList = emptyList<Coin>()
 
     class MyViewHolder (val binding: CoinItemBinding ): RecyclerView.ViewHolder(binding.root)
 
@@ -22,19 +23,24 @@ class Adapter: RecyclerView.Adapter<Adapter.MyViewHolder>(){
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.binding.tvTitle.text  = myList[position].chartName
-        holder.binding.tvDis.text = myList[position].bpi.usd.rate
-        holder.binding.tvValue.text = myList[position].bpi.gbp.rate
-        holder.binding.tvCoin.text = myList[position].bpi.eur.rate
+       // holder.binding.tvTitle.text  = myList[position].chartName
+       // holder.binding.tvDis.text = myList[position].bpi.usd.rate
+       // holder.binding.tvValue.text = myList[position].bpi.gbp.rate
+       // holder.binding.tvCoin.text = myList[position].bpi.eur.rate
+        val currentItem = myList[position]
+
     }
 
-    fun setData(newList: List<Post?> ){
-        try {
-            myList = newList as List<Post>
-            notifyDataSetChanged()
-        }catch (e: Exception){
+    fun setData(coin: List<Coin> ){
+      // try {
+      //     myList = newList as List<Post>
+      //     notifyDataSetChanged()
+      // }catch (e: Exception){
 
-        }
+      // }
+        this.myList = coin
+        notifyDataSetChanged()
+
 
     }
 

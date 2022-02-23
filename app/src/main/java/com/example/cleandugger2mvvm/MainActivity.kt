@@ -11,6 +11,8 @@ import com.example.cleandugger2mvvm.adapter.Adapter
 import com.example.cleandugger2mvvm.databinding.ActivityMainBinding
 import com.example.cleandugger2mvvm.presentation.MainViewModel
 import com.example.cleandugger2mvvm.presentation.MainViewModelFactory
+import com.example.data.dao.CoinDao
+import com.example.data.viewModel.CoinViewModel
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
@@ -18,8 +20,13 @@ class MainActivity : AppCompatActivity() {
     @Inject
     lateinit var viewModelFactory: MainViewModelFactory
 
+    @Inject
+    lateinit var coinDao: CoinDao
+
     private lateinit var viewModel: MainViewModel
     private val adapter by lazy { Adapter() }
+
+    private lateinit var coinViewModel: CoinViewModel
 
     var binding: ActivityMainBinding? = null
 
@@ -38,10 +45,16 @@ class MainActivity : AppCompatActivity() {
           Log.d("Response", response.body().toString())
 
             if(response.isSuccessful){
-                response.body()?.let { adapter.setData(listOf(it)) }
+                //response.body()?.let { adapter.setData(listOf(it)) }
             }else {
                 Toast.makeText(this, response.code(), Toast.LENGTH_SHORT).show()
             }
+        })
+
+
+        coinViewModel = ViewModelProvider(this).get(CoinViewModel::class.java)
+        coinViewModel.readAllData.observe(this, Observer { coin ->
+            adapter.setData(coin)
         })
 
     }
