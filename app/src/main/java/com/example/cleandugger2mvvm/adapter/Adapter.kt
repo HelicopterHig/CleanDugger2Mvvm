@@ -28,7 +28,10 @@ class Adapter: RecyclerView.Adapter<Adapter.MyViewHolder>(){
        // holder.binding.tvValue.text = myList[position].bpi.gbp.rate
        // holder.binding.tvCoin.text = myList[position].bpi.eur.rate
         val currentItem = myList[position]
-
+        holder.binding.tvTitle.text = currentItem.chartName.toString()
+        holder.binding.tvDis.text = currentItem.usdRate.toString()
+        holder.binding.tvValue.text = currentItem.gbpRate.toString()
+        holder.binding.tvCoin.text = currentItem.eurRate.toString()
     }
 
     fun setData(coin: List<Coin> ){
